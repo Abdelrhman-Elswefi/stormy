@@ -2,9 +2,6 @@ package com.example.elswefi.stormy.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-
-import com.example.elswefi.stormy.R;
-
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.TimeZone;
@@ -42,6 +39,10 @@ public class Day implements Parcelable{
 
     public String getIcon() {
         return mIcon;
+    }
+
+    public int getIconId() {
+        return Forecast.getIconId(mIcon);
     }
 
     public void setIcon(String icon) {

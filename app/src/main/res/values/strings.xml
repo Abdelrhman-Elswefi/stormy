@@ -19,4 +19,6 @@
     <string name="hourly">HOURLY</string>
     <string name="no_data_to_display">No data to display</string>
     <string name="this_week_s_weather">This week\'s weather</string>
+    <string name="hour_temp_icon">hour temp icon</string>
+    <string name="hour_weather_icon">hour weather icon</string>
 </resources>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:background="#ffb200"
+
+    >
+
+    <TextView
+        android:id="@+id/hourLabel"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/hourIcon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="12 PM"
+       />
+
+    <ImageView
+        android:id="@+id/hourIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/hourLabel"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/hourSummaryLabel"
+        app:srcCompat="@drawable/cloudy_night"
+        android:layout_marginLeft="8dp"
+        android:contentDescription="@string/hour_weather_icon" />
+
+    <TextView
+        android:id="@+id/hourSummaryLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/hourIcon"
+        app:layout_constraintEnd_toStartOf="@id/hourTempIcon"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="partly cloudy"
+        android:layout_marginLeft="8dp" />
+
+    <ImageView
+        android:id="@+id/hourTempIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/bg_temperature"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/hourSummaryLabel"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="8dp"
+        android:contentDescription="@string/hour_temp_icon" />
+
+    <TextView
+        android:id="@+id/hourTempLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical|center_horizontal|center"
+        android:textColor="#f25019"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/hourTempIcon"
+        app:layout_constraintEnd_toEndOf="@+id/hourTempIcon"
+        app:layout_constraintStart_toStartOf="@+id/hourTempIcon"
+        app:layout_constraintTop_toTopOf="@+id/hourTempIcon"
+        tools:text="100" />
+</android.support.constraint.ConstraintLayout>

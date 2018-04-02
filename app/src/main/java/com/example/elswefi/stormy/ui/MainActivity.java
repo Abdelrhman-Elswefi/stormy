@@ -36,6 +36,7 @@ import okhttp3.Response;
 
 public class MainActivity extends AppCompatActivity {
     public static final String DAYS_FORECAST = "DAYS_FORECAST";
+    public static final String HOURS_FORECAST = "HOURS_FORECAST";
     private Forecast mForecast;
     private static final String TAG = MainActivity.class.getSimpleName();
     @BindView(R.id.humidityValue)
@@ -153,7 +154,7 @@ public class MainActivity extends AppCompatActivity {
         mHumidity.setText(mCurrentWeather.getHumidity() + "");
         mSummary.setText(mCurrentWeather.getSummary());
         mPrecipChance.setText(mCurrentWeather.getPrecipProbability() + "%");
-        Drawable drawable = getResources().getDrawable(Forecast.getIconId(mCurrentWeather.getIcon()));
+        Drawable drawable = getResources().getDrawable(mCurrentWeather.getIconId());
         mWeatherIcon.setImageDrawable(drawable);
     }
 
@@ -252,5 +253,11 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(DAYS_FORECAST , mForecast.getDailyForecast());
         startActivity(intent);
 
+    }
+    @OnClick (R.id.hourlyButton)
+    public void startHourlyActivity(View view) {
+        Intent intent = new Intent(this, HourlyActivity.class);
+        intent.putExtra(HOURS_FORECAST, mForecast.getHourlyForecast());
+        startActivity(intent);
     }
 }

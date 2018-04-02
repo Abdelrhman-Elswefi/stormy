@@ -1,4 +1,4 @@
-package com.example.elswefi.stormy.model;
+package com.example.elswefi.stormy.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,6 +9,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.elswefi.stormy.R;
+import com.example.elswefi.stormy.model.Day;
+import com.example.elswefi.stormy.model.Forecast;
 
 /**
  * Created by elswe on 02-Apr-18 At 5:28 AM.
@@ -53,7 +55,7 @@ public class DayAdapter extends BaseAdapter {
         }
         Day day = mDays[i];
         holder.dayMaxTempLabel.setText(day.getTempMax() + "");
-        holder.dayIconImage.setImageResource(Forecast.getIconId(day.getIcon()));
+        holder.dayIconImage.setImageResource(day.getIconId());
         if (i == 0) {
             holder.dayLabel.setText("today");
         } else {
