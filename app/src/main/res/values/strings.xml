@@ -15,4 +15,8 @@
     <string name="refresh_icon">refresh icon</string>
     <string name="getting_data">Getting data ...</string>
     <string name="getting_location">getting location...</string>
+    <string name="_7_days">7 DAYS</string>
+    <string name="hourly">HOURLY</string>
+    <string name="no_data_to_display">No data to display</string>
+    <string name="this_week_s_weather">This week\'s weather</string>
 </resources>
